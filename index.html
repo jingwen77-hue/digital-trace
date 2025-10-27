@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Traces</title>
+    <meta name="description" content="Interactive portfolio exploring motion and identity." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body{margin:0}
+      @keyframes lightShift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+      @keyframes rotateRing {0%{transform:rotateX(12deg) rotateY(0)}100%{transform:rotateX(12deg) rotateY(360deg)}}
+      @keyframes shimmer { from { background-position: -200% 0; } to { background-position: 200% 0; } }
+      @keyframes buttonWobble { 0% { transform: rotate(0) scale(1); } 30% { transform: rotate(6deg) scale(1.06); } 60% { transform: rotate(-4deg) scale(0.98); } 100% { transform: rotate(0) scale(1); } }
+      .title-glow { text-shadow: 0 0 30px rgba(160,200,255,0.35); }
+      .animate-lightShift { animation: lightShift 16s ease-in-out infinite both; background-size:200% 200%; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-[#CDE7FF] via-[#F6F9FC] to-[#A0B9D9] animate-lightShift">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
